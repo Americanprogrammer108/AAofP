@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Contact</title>
+
+  <!-- CSS Section -->
+  <link rel="stylesheet" href="../../Content/app.css">
+  <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css">
+
+</head>
+<body>
+
+<header>
+
+</header>
+
+<main class="container">
+  <h1 class="mb-5"><%=title %>Edit Contact</h1>
+  <div class="row justify-content-lg-justify g-3">
+    <form class="col-lg-6 col-md-10 col-sm-10" method="post">
+      <div class="input-group mb-3">
+        <span for="Name" class="input-group-text">Full Name</span>
+        <input type="text" class="form-control" name="fullname" id="fullname" aria-describedby="Full Name Input" aria-label="Full name" value="<%=contact.FullName %>" required>
+      </div>
+      <div class="input-group mb-3">
+        <span for="Email" class="input-group-text">Email address</span>
+        <input type="email" class="form-control" name="EmailAddress" id="EmailAddress" aria-describedby="Email Address Input" aria-label="Email Address" value="<%=contact.EmailAddress %>" required>
+      </div>
+      <div class="input-group mb-3">
+        <span for="PhoneNumber" class="input-group-text">Contact Number</span>
+        <input type="tel" class="form-control" name="contactnumber" id="contactnumber" aria-describedby="Phone Number Input" aria-label="Phone Number"  value="<%=contact.ContactNumber%>" required>
+      </div>
+
+      <%
+      if(title === "Edit")
+      {%>
+        <button id="editButton" type="submit" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button>
+      <%}
+      else
+      {
+        <button id="addButton" type="submit" class="btn btn-primary"><i class="fas fa-edit"></i> Add</button>
+      }
+      %>
+      <a href="/contact-list" id="cancelButton" type="button" class="btn btn-danger"><i class="fa-solid fa-xmark"></i> Cancel</a>
+    </form>
+
+
+  </div>
+  <br>
+
+</main>
+
+
+
+<!-- Scripting Section -->
+<script src="../../Scripts/namespace.js"></script>
+<script src="../../Scripts/contact.js"></script>
+<script src="../../Scripts/app.js"></script>
+<script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+  <nav class="navbar navbar-expand-lg bg-body-primary navbar-primary bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/" ><img src="../../Images/AAofP.png" width="30" height="30">  American Association of Programmers</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+
+          <li class="nav-item">
+            <a class="nav-link <%= (page=== 'home')? 'active' : '';%>" href="/"><i class="fa-sharp fa-solid fa-house"></i> Home</a>
+          </li>
+
+          <li id="Products" class="nav-item">
+            <a class="nav-link <%= (page=== 'products')? 'active' : '';%>" href="/products"><i class="fa-brands fa-product-hunt"></i> Our Products</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link <%= (page=== 'services')? 'active' : '';%>" href="/services"><i class="fa-brands fa-usps"></i> Our Services</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link <%= (page=== 'about')? 'active' : '';%>" href="/about"> <i class="fa-sharp fa-solid fa-address-card"></i> About Us</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link <%= (page=== 'contact')? 'active' : '';%>" href="/contact"> <i class="fa-solid fa-phone"></i> Contact Us</a>
+          </li>
+
+          <%
+          if(displayName)
+          {%>
+            <li class="nav-item">
+              <a class="nav-link <%= (page=== 'contact-list')? 'active' : '';%>" href="/contact-list"> <i class="fa-solid fa-key"></i> Contact List</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link <%= (page=== 'logout')? 'active' : '';%>" href="/logout"> <i class="fa-solid fa-key"></i> Logout</a>
+            </li>
+          <%}
+          else
+          {%>
+            <li class="nav-item">
+              <a class="nav-link <%= (page=== 'login')? 'active' : '';%>" href="/login"> <i class="fa-solid fa-key"></i> Login</a>
+            </li>
+        <%}
+          %>
+          <!-- login works -->
+
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+<script>
+  function changelanguage()
+  {
+
+  }
+</script>
